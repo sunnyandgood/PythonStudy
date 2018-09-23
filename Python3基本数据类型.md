@@ -288,6 +288,297 @@
 
     <div align="center"><img src="./img/list_slicing1.png"/></div>
 
+* 加号 `+` 是列表连接运算符，星号 `*` 是重复操作。如下实例： 
+
+    >eg:
+
+      list = ['qwe',123,3.56,'sunny',88.9]
+      lists = ['sunny',789]
+
+      print(list)
+      print(list[0])
+      print(list[1:3])
+      print(list[2:])
+      print(lists * 2)
+      print(list + lists)
+
+    >执行以上程序会输出如下结果：
+
+      ['qwe', 123, 3.56, 'sunny', 88.9]
+      qwe
+      [123, 3.56]
+      [3.56, 'sunny', 88.9]
+      ['sunny', 789, 'sunny', 789]
+      ['qwe', 123, 3.56, 'sunny', 88.9, 'sunny', 789]
+
+* 与Python字符串不一样的是，列表中的元素是可以改变的：
+
+    >eg:
+
+      list = [1,2,3,4,5,6]
+      list[0] = 9
+      list[2:5] = [19,18,17]
+      print(list)
+
+      list[2:5] = []
+      print(list)
+
+    >执行以上程序会输出如下结果：
+
+      [9, 2, 19, 18, 17, 6]
+      [9, 2, 6]
+
+* List内置了有很多方法，例如append()、pop()等等。
+* 注意：
+   * 1、List写在方括号之间，元素用逗号隔开。
+   * 2、和字符串一样，list可以被索引和切片。
+   * 3、List可以使用+操作符进行拼接。
+   * 4、List中的元素是可以改变的。
+
+
+### 八、Tuple（元组）
+
+* 元组（tuple）与列表类似，不同之处在于元组的元素不能修改。元组写在小括号 () 里，元素之间用逗号隔开。 
+* 元组中的元素类型也可以不相同： 
+
+    >eg:
+
+      tuple = ( 'abcd', 786 , 2.23, 'sunny', 70.2  )
+      tuples = (123, 'sunny')
+
+      print (tuple)             # 输出完整元组
+      print (tuple[0])          # 输出元组的第一个元素
+      print (tuple[1:3])        # 输出从第二个元素开始到第三个元素
+      print (tuple[2:])         # 输出从第三个元素开始的所有元素
+      print (tuples * 2)        # 输出两次元组
+      print (tuple + tuples)    # 连接元组
+
+    >执行以上程序会输出如下结果：
+
+      ('abcd', 786, 2.23, 'sunny', 70.2)
+      abcd
+      (786, 2.23)
+      (2.23, 'sunny', 70.2)
+      (123, 'sunny', 123, 'sunny')
+      ('abcd', 786, 2.23, 'sunny', 70.2, 123, 'sunny')
+
+* 元组与字符串类似，可以被索引且下标索引从0开始，-1 为从末尾开始的位置。也可以进行截取（如上）。
+* 可以把字符串看作一种特殊的元组。 
+* tuple的元素**不可改变**，但它可以包含可变的对象，比如list列表。 
+* 构造包含 0 个或 1 个元素的元组比较特殊，所以有一些额外的语法规则： 
+
+      tup1 = ()    # 空元组
+      tup2 = (20,) # 一个元素，需要在元素后添加逗号
+
+* string、list和tuple都属于sequence（序列）。
+* 注意：
+     * 1、与字符串一样，元组的元素不能修改。
+     * 2、元组也可以被索引和切片，方法一样。
+     * 3、注意构造包含0或1个元素的元组的特殊语法规则。
+     * 4、元组也可以使用+操作符进行拼接。
+
+### 九、Set（集合）
+
+* 集合（set）是由一个或数个形态各异的大小整体组成的，构成集合的事物或对象称作元素或是成员。
+* 基本功能是进行成员关系测试和删除重复元素。
+* 可以使用大括号 { } 或者 set() 函数创建集合，注意：创建一个空集合必须用 set() 而不是 { }，因为 { } 是用来创建一个空字典。 
+* 创建格式：
+
+      parame = {value01,value02,...}
+      或者
+      set(value)
+
+* 实例
+
+    >eg:
+
+      student = {'Kitty','Juery','Tom','Rose','Jack','Jim'}
+
+      print(student)
+
+      # 成员测试
+      if 'Kitty' in student:
+      print("kitty in Set")
+      else:
+      print("kitty not in Set")
+
+      # set可以进行集合运算
+      set1 = set('qwertyuiop')
+      set2 = set('qweasdgiop')
+
+      print(set1)
+
+      print(set1 - set2) # set1和set2的差集
+      print(set1 | set2) # set1和set2的并集
+      print(set1 & set2) # set1和set2的交集
+      print(set1 ^ set2) # set1和set2中不同时存在的元素
+
+    >执行以上程序会输出如下结果：
+
+      {'Rose', 'Tom', 'Juery', 'Jack', 'Jim', 'Kitty'}
+      kitty in Set
+      {'i', 'u', 'p', 'e', 'y', 'r', 't', 'q', 'o', 'w'}
+      {'t', 'u', 'r', 'y'}
+      {'i', 'a', 'p', 'e', 'g', 'q', 'o', 'u', 's', 'd', 'y', 'r', 't', 'w'}
+      {'i', 'p', 'e', 'q', 'o', 'w'}
+      {'s', 'a', 'u', 'd', 'g', 'y', 'r', 't'}
+
+### 十、Dictionary（字典）
+
+* 字典（dictionary）是Python中另一个非常有用的内置数据类型。
+* 列表是有序的对象集合，字典是无序的对象集合。两者之间的区别在于：字典当中的元素是通过键来存取的，而不是通过偏移存取。
+* 字典是一种映射类型，字典用"`{ }`"标识，它是一个无序的**键(key) : 值(value)对集合**。
+* 键(key)必须使用**不可变类型**。
+* 在同一个字典中，键(key)必须是唯一的。 
+* 实例
+
+    >eg:
+
+      dict = {}
+      dict['qwe'] = 123
+      dict[2] = 'qwe'
+
+      dicts = {'name':'sunny','code':88,'site':'NUC'}
+
+      print(dict['qwe'])    # 输出键为 'qwe' 的值
+      print(dict[2])        # 输出键为 2 的值
+      print(dicts)          # 输出完整的字典
+      print(dicts.keys())   # 输出所有键
+      print(dicts.values()) # 输出所有值
+
+    >执行以上程序会输出如下结果：
+
+      123
+      qwe
+      {'name': 'sunny', 'code': 88, 'site': 'NUC'}
+      dict_keys(['name', 'code', 'site'])
+      dict_values(['sunny', 88, 'NUC'])
+
+* 构造函数 `dict()` 可以直接从键值对序列中构建字典
+
+    >eg:
+
+      dict1 = dict([('sunny',1),('and1',2),('good',3)])
+      dict2 = {x: x**2 for x in (2, 4, 6)}
+      dict3 = dict(sunny=1, and1=2, good=3)
+
+      print(dict1)
+      print(dict2)
+      print(dict3)
+
+    >执行以上程序会输出如下结果：
+
+      {'sunny': 1, 'and1': 2, 'good': 3}
+      {2: 4, 4: 16, 6: 36}
+      {'sunny': 1, 'and1': 2, 'good': 3}
+
+* 字典类型也有一些内置的函数，例如clear()、keys()、values()等。
+* 注意：
+     * 1、字典是一种映射类型，它的元素是键值对。
+     * 2、字典的关键字必须为不可变类型，且不能重复。
+     * 3、创建空字典使用 { }。
+
+### 十一、Python数据类型转换
+
+* 有时候，我们需要对数据内置的类型进行转换，数据类型的转换，你只需要将数据类型作为函数名即可。
+* 以下几个内置的函数可以执行数据类型之间的转换。这些函数返回一个新的对象，表示转换的值。
+
+     <table>
+        <tr>
+           <td>函数</td>
+           <td>描述</td>
+        </tr>
+        <tr>
+           <td>int(x [,base])</td>
+           <td>将x转换为一个整数</td>
+        </tr>
+        <tr>
+           <td>float(x)</td>
+           <td>将x转换到一个浮点数</td>
+        </tr>
+        <tr>
+           <td>complex(real [,imag])</td>
+           <td>创建一个复数</td>
+        </tr>
+        <tr>
+           <td>str(x)</td>
+           <td>将对象 x 转换为字符串</td>
+        </tr>
+        <tr>
+           <td>repr(x)</td>
+           <td>将对象 x 转换为表达式字符串</td>
+        </tr>
+        <tr>
+           <td>eval(str)</td>
+           <td>用来计算在字符串中的有效Python表达式,并返回一个对象</td>
+        </tr>
+        <tr>
+           <td>tuple(s)</td>
+           <td>将序列 s 转换为一个元组</td>
+        </tr>
+        <tr>
+           <td>list(s)</td>
+           <td>将序列 s 转换为一个列表</td>
+        </tr>
+        <tr>
+           <td>set(s)</td>
+           <td>转换为可变集合</td>
+        </tr>
+        <tr>
+           <td>dict(d)</td>
+           <td>创建一个字典。d 必须是一个序列 (key,value)元组。</td>
+        </tr>
+        <tr>
+           <td>frozenset(s)</td>
+           <td>转换为不可变集合</td>
+        </tr>
+        <tr>
+           <td>chr(x)</td>
+           <td>将一个整数转换为一个字符</td>
+        </tr>
+        <tr>
+           <td>ord(x)</td>
+           <td>将一个字符转换为它的整数值</td>
+        </tr>
+        <tr>
+           <td>hex(x)</td>
+           <td>将一个整数转换为一个十六进制字符串</td>
+        </tr>
+        <tr>
+           <td>oct(x)</td>
+           <td>将一个整数转换为一个八进制字符串</td>
+        </tr>
+     </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

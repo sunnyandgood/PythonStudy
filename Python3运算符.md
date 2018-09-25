@@ -297,18 +297,122 @@ Python语言支持以下类型的运算符:
        </tr>
     </table>
 
+### 六、Python逻辑运算符
+
+Python语言支持逻辑运算符，以下假设变量 a 为 10, b为 20:
+
+<table>
+   <tr>
+      <td>运算符</td>
+      <td>逻辑表达式</td>
+      <td>描述</td>
+      <td>实例</td>
+   </tr>
+   <tr>
+      <td>and</td>
+      <td>x and y</td>
+      <td>布尔"与" - 如果 x 为 False，x and y 返回 False，否则它返回 y 的计算值。</td>
+      <td>(a and b) 返回 20。</td>
+   </tr>
+   <tr>
+      <td>or</td>
+      <td>x or y</td>
+      <td>布尔"或" - 如果 x 是 True，它返回 x 的值，否则它返回 y 的计算值。</td>
+      <td>(a or b) 返回 10。</td>
+   </tr>
+   <tr>
+      <td>not</td>
+      <td>not x</td>
+      <td>布尔"非" - 如果 x 为 True，返回 False 。如果 x 为 False，它返回 True。</td>
+      <td>not(a and b) 返回 False</td>
+   </tr>
+</table>
+
+### 七、Python成员运算符
+
+除了以上的一些运算符之外，Python还支持成员运算符，测试实例中包含了一系列的成员，包括字符串，列表或元组。
 
 
+<table>
+   <tr>
+      <td>运算符</td>
+      <td>描述</td>
+      <td>实例</td>
+   </tr>
+   <tr>
+      <td>in</td>
+      <td>如果在指定的序列中找到值返回 True，否则返回 False。</td>
+      <td>x 在 y 序列中 , 如果 x 在 y 序列中返回 True。</td>
+   </tr>
+   <tr>
+      <td>not in</td>
+      <td>如果在指定的序列中没有找到值返回 True，否则返回 False。</td>
+      <td>x 不在 y 序列中 , 如果 x 不在 y 序列中返回 True。</td>
+   </tr>
+</table>
 
+###  八、Python运算符优先级
 
+以下表格列出了从最高到最低优先级的所有运算符：
 
-
-
-
-
-
-
-
+<table>
+   <tr>
+      <td>运算符</td>
+      <td>描述</td>
+   </tr>
+   <tr>
+      <td>**</td>
+      <td>指数 (最高优先级)</td>
+   </tr>
+   <tr>
+      <td>~ + -</td>
+      <td>按位翻转, 一元加号和减号 (最后两个的方法名为 +@ 和 -@)</td>
+   </tr>
+   <tr>
+      <td>* / % //</td>
+      <td>乘，除，取模和取整除</td>
+   </tr>
+   <tr>
+      <td>+ -</td>
+      <td>加法减法</td>
+   </tr>
+   <tr>
+      <td>>> <<</td>
+      <td>右移，左移运算符</td>
+   </tr>
+   <tr>
+      <td>&</td>
+      <td>位 'AND'</td>
+   </tr>
+   <tr>
+      <td>^ |</td>
+      <td>位运算符</td>
+   </tr>
+   <tr>
+      <td><= < > >=</td>
+      <td>比较运算符</td>
+   </tr>
+   <tr>
+      <td><> == !=</td>
+      <td>等于运算符</td>
+   </tr>
+   <tr>
+      <td>= %= /= //= -= += *= **=</td>
+      <td>赋值运算符</td>
+   </tr>
+   <tr>
+      <td>is is not</td>
+      <td>身份运算符</td>
+   </tr>
+   <tr>
+      <td>in not in</td>
+      <td>成员运算符</td>
+   </tr>
+   <tr>
+      <td>and or not</td>
+      <td>逻辑运算符</td>
+   </tr>
+</table>
 
 
 

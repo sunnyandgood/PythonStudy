@@ -193,7 +193,7 @@
    </tr>
    <tr>
       <td>cmp(x, y)</td>
-      <td>如果 x < y 返回 -1, 如果 x == y 返回 0, 如果 x > y 返回 1。 Python 3 已废弃 。使用 使用 (x>y)-(x<y)替换。</td>
+      <td>如果 x < y 返回 -1, 如果 x == y 返回 0, 如果 x > y 返回 1。 Python 3 已废弃 。使用 使用 (x > y) - (x < y) 替换。 </td>
    </tr>
    <tr>
       <td>exp(x) </td>

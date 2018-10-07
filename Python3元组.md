@@ -111,11 +111,148 @@
 
 * 与字符串一样，元组之间可以使用 `+` 号和 `*` 号进行运算。这就意味着他们可以组合和复制，运算后会生成一个新的元组。  
 
-     >eg:
-     
+     <table>
+        <tr>
+           <td>Python 表达式</td>
+           <td>结果</td>
+           <td>描述</td>
+        </tr>
+        <tr>
+           <td>len((1, 2, 3))</td>
+           <td>3</td>
+           <td>计算元素个数</td>
+        </tr>
+        <tr>
+           <td>(1, 2, 3) + (4, 5, 6)</td>
+           <td>(1, 2, 3, 4, 5, 6)</td>
+           <td>连接</td>
+        </tr>
+        <tr>
+           <td>('Hi!',) * 4</td>
+           <td>('Hi!', 'Hi!', 'Hi!', 'Hi!')</td>
+           <td>复制</td>
+        </tr>
+        <tr>
+           <td>3 in (1, 2, 3)</td>
+           <td>TRUE</td>
+           <td>元素是否存在</td>
+        </tr>
+        <tr>
+           <td>for x in (1, 2, 3): print (x,)</td>
+           <td>1 2 3</td>
+           <td>迭代</td>
+        </tr>
+     </table>
+
+### 八、元组索引，截取
+
+* 因为元组也是一个序列，所以可以访问元组中的指定位置的元素，也可以截取索引中的一段元素，如下所示：
+
+* 元组：
+
+          L = ('Google', 'Taobao', 'sunny')
+
+     <table>
+        <tr>
+           <td>Python 表达式</td>
+           <td>结果</td>
+           <td>描述</td>
+        </tr>
+        <tr>
+           <td>L[2]</td>
+           <td>'sunny'</td>
+           <td>读取第三个元素</td>
+        </tr>
+        <tr>
+           <td>L[-2]</td>
+           <td>'Taobao'</td>
+           <td>反向读取；读取倒数第二个元素</td>
+        </tr>
+        <tr>
+           <td>L[1:]</td>
+           <td>('Taobao', 'sunny')</td>
+           <td>截取元素，从第二个开始后的所有元素。</td>
+        </tr>
+     </table>
+
+### 九、元组内置函数
 
 
-     >以上实例输出结果：
+<table>
+   <tr>
+      <td>序号</td>
+      <td>方法及描述</td>
+      <td>实例</td>
+   </tr>
+   <tr>
+      <th rowspan="4">1</th>
+      <td>len(tuple)</td>
+      <td> >>> tuple1 = ('Google', 'Runoob', 'Taobao')</td>
+   </tr>
+   <tr>
+      <th rowspan="3">计算元组元素个数</th>
+      <td> >>> len(tuple1)</td>
+   </tr>
+   <tr>
+      <td>3</td>
+   </tr>
+   <tr>
+      <td> >>> </td>
+   </tr>
+   <tr>
+      <th rowspan="4">2</th>
+      <td>max(tuple)</td>
+      <td> >>> tuple2 = ('5', '4', '8')</td>
+   </tr>
+   <tr>
+      <th rowspan="3">返回元组中元素最大值</th>
+      <td>>>> max(tuple2)</td>
+   </tr>
+   <tr>
+      <td>'8'</td>
+   </tr>
+   <tr>
+      <td> >>> </td>
+   </tr>
+   <tr>
+      <th rowspan="4">3</th>
+      <td>min(tuple)</td>
+      <td> >>> tuple2 = ('5', '4', '8')</td>
+   </tr>
+   <tr>
+      <th rowspan="3">返回元组中元素最小值</th>
+      <td>>>> min(tuple2)</td>
+   </tr>
+   <tr>
+      <td>'4'</td>
+   </tr>
+   <tr>
+      <td> >>> </td>
+   </tr>
+   <tr>
+      <th rowspan="4">4</th>
+      <td>tuple(seq)</td>
+      <td> >>> list1= ['Google', 'Taobao', 'Runoob', 'Baidu']</td>
+   </tr>
+   <tr>
+      <th rowspan="3">将列表转换为元组</th>
+      <td>>>> tuple1=tuple(list1)</td>
+   </tr>
+   <tr>
+      <td> >>> tuple1</td>
+   </tr>
+   <tr>
+      <td>('Google', 'Taobao', 'Runoob', 'Baidu')</td>
+   </tr>
+</table>
+
+
+
+
+
+
+
+
 
 
 

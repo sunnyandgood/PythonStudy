@@ -9,6 +9,8 @@
       parame = {value01,value02,...}
       或者
       set(value)
+      
+* 实例
 
      >eg:
      

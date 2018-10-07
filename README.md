@@ -7,6 +7,7 @@
 * [Python3 字符串](./Python3字符串.md)
 * [Python3 列表](./Python3列表.md)
 * [Python3 元组](./Python3元组.md)
+* [Python3 字典](./Python3字典.md)
 
 
 

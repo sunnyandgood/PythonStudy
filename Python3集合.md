@@ -44,7 +44,18 @@
       {'c', 'a'}
       {'b', 'm', 'd', 'z', 'r', 'l'}
 	 
+* 类似列表推导式，同样集合支持集合推导式(Set comprehension):
 
+     >eg:
+     
+	  a = {x for x in 'abracadabra'  if x not in 'abc'}
+      print(a)
+
+     >以上实例输出结果：
+	 
+	  {'d', 'r'}
+	 
+### 二、添加元素
 
 
 

@@ -172,22 +172,139 @@
 	       {'sunny', 'world'}
 	 
 
+### 四、计算集合元素个数
 
+* 语法格式如下：
 
+      len(s)
 
+     >eg:
 
+      thisSet = set(("hello","world","sunny"))
 
+      x = len(thisSet)
+      print(x)
 
+     >以上实例输出结果：
 
+      3
 
+### 五、清空集合
 
+* 语法格式如下：
 
+      s.clear()
 
+     >eg:
 
+      thisSet = set(("hello","world","sunny"))
 
+      thisSet.clear()
+      print(thisSet)
 
+     >以上实例输出结果：
 
+      set()
 
+### 六、判断元素是否在集合中存在
+
+* 语法格式如下：
+
+      x in s
+
+     * 判断元素 s 是否在集合 x 中存在，存在返回 True，不存在返回 False。
+
+          >eg:
+
+           thisSet = set(("hello","world","sunny"))
+
+           a = "hello" in thisSet
+           b = "aaa" in thisSet
+
+           print(a)
+           print(b)
+
+          >以上实例输出结果：
+
+           True
+           False
+
+### 七、集合内置方法完整列表
+
+<table>
+   <tr>
+      <td>方法</td>
+      <td>描述</td>
+   </tr>
+   <tr>
+      <td>add()</td>
+      <td>为集合添加元素</td>
+   </tr>
+   <tr>
+      <td>clear()</td>
+      <td>移除集合中的所有元素</td>
+   </tr>
+   <tr>
+      <td>copy()</td>
+      <td>拷贝一个集合</td>
+   </tr>
+   <tr>
+      <td>difference()</td>
+      <td>返回多个集合的差集</td>
+   </tr>
+   <tr>
+      <td>difference_update()</td>
+      <td>移除集合中的元素，该元素在指定的集合也存在。</td>
+   </tr>
+   <tr>
+      <td>discard()</td>
+      <td>删除集合中指定的元素</td>
+   </tr>
+   <tr>
+      <td>intersection()</td>
+      <td>返回集合的交集</td>
+   </tr>
+   <tr>
+      <td>intersection_update()</td>
+      <td>删除集合中的元素，该元素在指定的集合中不存在。</td>
+   </tr>
+   <tr>
+      <td>isdisjoint()</td>
+      <td>判断两个集合是否包含相同的元素，如果没有返回 True，否则返回 False。</td>
+   </tr>
+   <tr>
+      <td>issubset()</td>
+      <td>判断指定集合是否为该方法参数集合的子集。</td>
+   </tr>
+   <tr>
+      <td>issuperset()</td>
+      <td>判断该方法的参数集合是否为指定集合的子集</td>
+   </tr>
+   <tr>
+      <td>pop()</td>
+      <td>随机移除元素</td>
+   </tr>
+   <tr>
+      <td>remove()</td>
+      <td>移除指定元素</td>
+   </tr>
+   <tr>
+      <td>symmetric_difference()</td>
+      <td>返回两个集合中不重复的元素集合。</td>
+   </tr>
+   <tr>
+      <td>symmetric_difference_update()</td>
+      <td>移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。</td>
+   </tr>
+   <tr>
+      <td>union()</td>
+      <td>返回两个集合的并集</td>
+   </tr>
+   <tr>
+      <td>update()</td>
+      <td>给集合添加元素</td>
+   </tr>
+</table>
 
 
 

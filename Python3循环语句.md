@@ -214,5 +214,146 @@
 
 ### 六、break和continue语句及循环中的else子句
 
+* 1、break 语句可以跳出 for 和 while 的循环体。如果从 for 或 while 循环中终止，任何对应的循环 else 块将不执行。 实例如下： 
 
+     >eg:
+
+      for temp in "sunnyandgood":
+          if(temp=="a"):
+              break
+          print("当前字母为:",temp)
+
+      var = 10
+      while(var > 0):
+          if(var==5):
+              break
+          print("当前变量的值为：",var)
+          var -= 1
+      print("bye!")
+
+     >以上实例输出结果：
+
+      当前字母为: s
+      当前字母为: u
+      当前字母为: n
+      当前字母为: n
+      当前字母为: y
+      当前变量的值为： 10
+      当前变量的值为： 9
+      当前变量的值为： 8
+      当前变量的值为： 7
+      当前变量的值为： 6
+      bye!
+
+* 2、continue 语句被用来告诉Python跳过当前循环块中的剩余语句，然后继续进行下一轮循环。 
+
+     >eg:
+
+      for temp in "sunnyandgood":
+          if(temp=="a"):
+              continue
+          print("当前字母为:",temp)
+
+      var = 10
+      while(var > 0):
+          var -= 1
+          if(var==5):
+              continue
+          print("当前变量的值为：",var)
+      print("bye!")
+
+     >以上实例输出结果：
+
+      当前字母为: s
+      当前字母为: u
+      当前字母为: n
+      当前字母为: n
+      当前字母为: y
+      当前字母为: n
+      当前字母为: d
+      当前字母为: g
+      当前字母为: o
+      当前字母为: o
+      当前字母为: d
+      当前变量的值为： 9
+      当前变量的值为： 8
+      当前变量的值为： 7
+      当前变量的值为： 6
+      当前变量的值为： 4
+      当前变量的值为： 3
+      当前变量的值为： 2
+      当前变量的值为： 1
+      当前变量的值为： 0
+
+* 3、循环语句可以有 else 子句，它在穷尽列表(以for循环)或条件变为 false (以while循环)导致循环终止时被执行,但循环被break终止时不执行。 
+
+     >eg:
+
+      for num in range(2,10):
+          for x in range(2,num):
+              if(num % x ==0):
+                  print(num , "等于" , x , "*" , num//x)
+                  break
+          else:
+              # 循环中没有找到元素
+              print(num , " 是质数")
+
+     >以上实例输出结果：
+
+      2  是质数
+      3  是质数
+      4 等于 2 * 2
+      5  是质数
+      6 等于 2 * 3
+      7  是质数
+      8 等于 2 * 4
+      9 等于 3 * 3
+
+### 7、pass 语句
+
+* Python pass是空语句，是为了保持程序结构的完整性。
+* pass 不做任何事情，一般用做占位语句，如下实例
+
+     >eg:
+
+      while True:
+          pass    # 等待键盘中断 (Ctrl+C)
+
+    * 最小的类
+    
+         >eg:
+
+          class EmptyClass:
+              pass
+
+
+    * 以下实例在字母为 `n` 时 执行 pass 语句块:
+
+         >eg:
+
+          for temp in "sunnyandgood":
+              if(temp == "n"):
+                  pass
+                  print("执行pass块")
+              print("当前字母：",temp)
+          print("bye!")
+
+         >以上实例输出结果：
+
+          当前字母： s
+          当前字母： u
+          执行pass块
+          当前字母： n
+          执行pass块
+          当前字母： n
+          当前字母： y
+          当前字母： a
+          执行pass块
+          当前字母： n
+          当前字母： d
+          当前字母： g
+          当前字母： o
+          当前字母： o
+          当前字母： d
+          bye!
 

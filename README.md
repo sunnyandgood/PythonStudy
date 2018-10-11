@@ -13,6 +13,7 @@
 * [Python3 条件控制](./Python3条件控制.md)
 * [Python3 循环语句](./Python3循环语句.md)
 * [Python3 迭代器与生成器](./Python3迭代器与生成器.md)
+* [Python3 变量](./Python3变量.md)
 
 ### [函数](./函数)
 * [简单函数](./函数/简单函数.md)
